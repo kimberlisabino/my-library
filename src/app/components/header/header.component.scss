@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+
+  img {
+    padding: 20px;
+  }
+
+  p {
+    font-family: 'Cookie', cursive;
+    font-size: 5rem;
+    color: whitesmoke;
+    padding: 10px 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
