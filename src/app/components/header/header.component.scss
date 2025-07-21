@@ -1,25 +1,33 @@
+@use '../../../stylesVariables.scss' as *;
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: $primary-color;
 
   img {
     padding: 20px;
   }
 
-  p {
+  a {
     font-family: 'Cookie', cursive;
     font-size: 5rem;
-    color: whitesmoke;
+    color: $secondary-color;
     padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
   }
+
+  a:focus {
+  outline: none;
+}
 
   button {
     padding: 10px 20px;
     font-size: 1.5rem;
     background-color: transparent;
-    color: whitesmoke;
+    color: $secondary-color;
     border: none;
     cursor: pointer;
     text-decoration: underline;
