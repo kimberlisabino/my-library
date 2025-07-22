@@ -17,10 +17,16 @@ export class AppComponent {
   exibirLayoutCompleto = true;
 
   constructor(private router: Router) {
-    this,router.events
+    this.router.events
     .pipe(filter(event => event instanceof NavigationEnd))
     .subscribe((event: any) => {
       this.exibirLayoutCompleto = event.url !== '/';
+
+      if(event.url === '/') {
+        document.body.classList.add('home-background');
+      } else {
+        document.body.classList.remove('home-background');
+      }
     });
   }
 }

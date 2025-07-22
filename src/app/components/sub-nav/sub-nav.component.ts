@@ -15,4 +15,8 @@ export class SubNavComponent {
   goToMyBooks() {
     this.router.navigate(['/meus-livros']);
   }
+
+  goToSearchBooks() {
+    this.router.navigate(['/buscar-livros']);
+  }
 }
