@@ -1,1 +1,15 @@
-<p>buscar-livro works!</p>
+<section class = "searchBooks">
+  <h1>Buscar novo livro</h1>
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
+    <div class="input-group">
+      <label for="search">Buscar por título, autor ou ISBN:</label>
+      <input type="text" id="search" formControlName="searchTerm" name="search">
+    </div>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class = "results">
+      <p>Os resultados aparecerão aqui...</p>
+    </div>
+</section>

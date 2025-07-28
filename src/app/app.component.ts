@@ -21,12 +21,6 @@ export class AppComponent {
     .pipe(filter(event => event instanceof NavigationEnd))
     .subscribe((event: any) => {
       this.exibirLayoutCompleto = event.url !== '/';
-
-      if(event.url === '/') {
-        document.body.classList.add('home-background');
-      } else {
-        document.body.classList.remove('home-background');
-      }
     });
   }
 }

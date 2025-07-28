@@ -1,13 +1,10 @@
 @use "../../../stylesVariables.scss" as *;
 
-.home-background {
+.intro {
   width: 100vw;
   height: 100vh;
   background: $primary-color;
   background: linear-gradient(120deg, #e1bee7 0%, #9575cd 60%, #7c43bd 100%);
-}
-
-.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,5 +42,20 @@
   p {
     font-size: 1rem;
     color: $text-color;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: $text-color;
+    background-color: $hover-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: color-mix(in srgb, $hover-color 90%, black 10%);
+    }
   }
 }
