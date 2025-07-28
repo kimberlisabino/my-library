@@ -8,7 +8,16 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './buscar-livro.component.scss',
   standalone: true
 })
+
 export class BuscarLivroComponent {
+  showResults = false;
+
+  searchResult = [
+    { title: 'Livro 1', author: 'Autor 1' },
+    { title: 'Livro 2', author: 'Autor 2' },
+    { title: 'Livro 3', author: 'Autor 3' }
+  ];
+
   searchForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
@@ -18,7 +27,7 @@ export class BuscarLivroComponent {
   }
 
   onSubmit() {
-    console.log('Search term:', this.searchForm.value.searchTerm);
+    this.showResults = true;
   }
 
 }

@@ -10,6 +10,14 @@
     </form>
 
     <div class = "results">
-      <p>Os resultados aparecerão aqui...</p>
+      <!-- criando molde para exibir os resultados -->
+       @if(showResults) {
+         @for (book of searchResult; track book) {
+           <div class="book-item">
+             <h3>{{ book.title }}</h3>
+             <p>{{ book.author }}</p>
+           </div>
+         }
+       }
     </div>
 </section>
